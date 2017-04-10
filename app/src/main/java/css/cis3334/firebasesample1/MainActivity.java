@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -62,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot voteDataSnapshot : dataSnapshot.getChildren()) {
                     Vote vote = voteDataSnapshot.getValue(Vote.class);          // get the current vote from the data set returned
                     editTextAllVotes.append("\n" + vote.toString());            // display the vote in the edit text widget
-                    Log.d("CIS3334", "reading vote: "+ vote.toString());        // debugging log
                 }
             }
 
