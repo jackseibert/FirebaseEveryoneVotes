@@ -9,8 +9,6 @@ public class Vote {
     Integer selection;
 
     public Vote() {
-        this.answerText = "";
-        this.selection = 0;
     }
 
     public Vote(String answerText, Integer selection) {
@@ -36,6 +34,9 @@ public class Vote {
 
     @Override
     public String toString() {
-        return "A vote " + answerText + " or " + selection;
+        return "Vote{" +
+                "answerText='" + answerText + '\'' +
+                ", selection=" + selection +
+                '}';
     }
 }
